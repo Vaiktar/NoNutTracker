@@ -4,20 +4,6 @@ Shared November 2026 calendar for seven accounts. The interface is in Italian. E
 
 Days follow **Europe/Rome**. A day unlocks at midnight in Italy and can be changed through November 30. A past day with no mark is **Dimenticato** and scores −10 until someone edits it. Today stays empty until midnight. Future days score 0. Totals can go negative. Ties are ordered alphabetically.
 
-## Accounts
-
-| Username | Password |
-| --- | --- |
-| Vaik | password1 |
-| Blumi | password2 |
-| Frax | password3 |
-| Lanza | password4 |
-| Inad | password5 |
-| Adam | password6 |
-| Paolo | password7 |
-
-There is no signup. Usernames are case-sensitive.
-
 ## Run locally
 
 From two terminals:
