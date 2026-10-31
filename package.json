@@ -1,0 +1,9 @@
+{
+  "name": "nonut-tracker",
+  "private": true,
+  "scripts": {
+    "dev:api": "npm --prefix backend run dev",
+    "dev:web": "npm --prefix frontend run dev",
+    "smoke": "npm --prefix backend run smoke"
+  }
+}
