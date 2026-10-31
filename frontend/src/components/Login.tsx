@@ -3,6 +3,11 @@ import { ApiError, login } from "../api";
 import { writeSession } from "../session";
 import type { Session } from "../types";
 
+function installedApp() {
+  const ios = navigator as Navigator & { standalone?: boolean };
+  return window.matchMedia("(display-mode: standalone)").matches || ios.standalone === true;
+}
+
 export function Login({ onSuccess }: { onSuccess: (session: Session) => void }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -71,6 +76,12 @@ export function Login({ onSuccess }: { onSuccess: (session: Session) => void }) 
         >
           {pending ? "Accesso in corso…" : "Entra"}
         </button>
+
+        {!installedApp() && (
+          <p className="mt-4 text-xs leading-5 text-mist">
+            Sul telefono: iPhone, Condividi e poi Aggiungi a Home. Android, Installa dal browser.
+          </p>
+        )}
       </form>
     </main>
   );

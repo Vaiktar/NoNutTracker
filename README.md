@@ -80,3 +80,12 @@ VITE_API_URL=https://your-api-id.execute-api.your-region.amazonaws.com
 ```
 
 No trailing slash. After the site has a URL, redeploy the API with that origin in `CorsOrigins` if you did not use `*`.
+
+## On a phone
+
+Open the Vercel URL in the phone browser and install it. The home-screen icon is the same site, full screen, still signed in through the browser’s saved login.
+
+- iPhone: Share, then Add to Home Screen.
+- Android: Install from the browser menu.
+
+Scores still come from the API, so the phone needs a connection. The installed app does not cache the board.
