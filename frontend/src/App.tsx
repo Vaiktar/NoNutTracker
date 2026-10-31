@@ -62,14 +62,14 @@ function BoardScreen({ session, onLogout }: { session: Session; onLogout: () => 
             <button
               type="button"
               onClick={() => void load()}
-              className="rounded-xl border border-line px-3 py-1.5 text-sm text-cream"
+              className="rounded-xl border border-line px-3 py-1.5 text-sm text-cream hover:border-ember/70 hover:bg-white/8"
             >
               Aggiorna
             </button>
             <button
               type="button"
               onClick={onLogout}
-              className="rounded-xl border border-line px-3 py-1.5 text-sm text-mist"
+              className="rounded-xl border border-line px-3 py-1.5 text-sm text-mist hover:border-ember/70 hover:bg-white/8 hover:text-cream"
             >
               Esci
             </button>

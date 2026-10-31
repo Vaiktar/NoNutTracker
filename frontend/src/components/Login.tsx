@@ -67,7 +67,7 @@ export function Login({ onSuccess }: { onSuccess: (session: Session) => void }) 
         <button
           type="submit"
           disabled={pending}
-          className="mt-5 w-full rounded-xl bg-ember px-4 py-2.5 font-semibold text-ink disabled:opacity-60"
+          className="mt-5 w-full rounded-xl bg-ember px-4 py-2.5 font-semibold text-ink hover:bg-[#f0b575] disabled:opacity-60"
         >
           {pending ? "Accesso in corso…" : "Entra"}
         </button>

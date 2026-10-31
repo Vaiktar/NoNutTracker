@@ -70,8 +70,8 @@ export function Calendar({
               onClick={() => onSelect(day.date)}
               className={`min-h-16 rounded-2xl border px-1 py-1.5 text-left sm:min-h-24 sm:px-2 ${
                 selected === day.date
-                  ? "border-ember bg-panel-2"
-                  : "border-line bg-ink/50 hover:border-ember/50"
+                  ? "border-ember bg-panel-2 hover:bg-[#2c352e]"
+                  : "border-line bg-ink/50 hover:border-ember hover:bg-panel-2"
               } ${day.locked ? "opacity-60" : ""}`}
             >
               <span className={`block text-xs font-semibold sm:text-sm ${day.date === today ? "text-ember" : "text-cream"}`}>

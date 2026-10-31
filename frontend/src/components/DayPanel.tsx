@@ -112,7 +112,7 @@ export function DayPanel({
               type="button"
               disabled={pending}
               onClick={() => void markSi()}
-              className="rounded-xl bg-si px-4 py-2 text-sm font-semibold text-ink disabled:opacity-60"
+              className="rounded-xl bg-si px-4 py-2 text-sm font-semibold text-ink hover:bg-[#9ae0bb] disabled:opacity-60"
             >
               Sì · +10
             </button>
@@ -127,7 +127,9 @@ export function DayPanel({
                 setError(null);
                 setSaved(false);
               }}
-              className="rounded-xl bg-no px-4 py-2 text-sm font-semibold text-ink disabled:opacity-60"
+              className={`rounded-xl bg-no px-4 py-2 text-sm font-semibold text-ink hover:bg-[#f3a394] disabled:opacity-60 ${
+                showNoForm ? "ring-2 ring-cream/70" : ""
+              }`}
               aria-expanded={showNoForm}
             >
               No · −10
@@ -156,7 +158,7 @@ export function DayPanel({
                 accept="image/*"
                 required
                 onChange={(event) => chooseFile(event.target.files?.[0] ?? null)}
-                className="text-sm text-mist file:mr-3 file:rounded-lg file:border-0 file:bg-panel-2 file:px-3 file:py-1.5 file:text-cream"
+                className="text-sm text-mist file:mr-3 file:rounded-lg file:border-0 file:bg-panel-2 file:px-3 file:py-1.5 file:text-cream file:hover:bg-line"
               />
               {preview && (
                 <img src={preview} alt="Anteprima della prova" className="max-h-56 rounded-xl object-contain" />
@@ -164,7 +166,7 @@ export function DayPanel({
               <button
                 type="submit"
                 disabled={pending}
-                className="justify-self-start rounded-xl border border-no px-4 py-2 text-sm font-semibold text-no disabled:opacity-60"
+                className="justify-self-start rounded-xl border border-no px-4 py-2 text-sm font-semibold text-no hover:bg-no/15 disabled:opacity-60"
               >
                 {pending ? "Salvataggio…" : "Salva No"}
               </button>

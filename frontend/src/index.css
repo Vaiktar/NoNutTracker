@@ -37,3 +37,42 @@ input,
 textarea {
   font: inherit;
 }
+
+button {
+  cursor: pointer;
+  transition:
+    transform 120ms ease,
+    filter 120ms ease,
+    background-color 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease;
+}
+
+button:hover:not(:disabled) {
+  filter: brightness(1.12);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(1px) scale(0.98);
+  filter: brightness(0.94);
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+input[type="file"]::file-selector-button {
+  cursor: pointer;
+  transition:
+    transform 120ms ease,
+    filter 120ms ease,
+    background-color 120ms ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+  filter: brightness(1.15);
+}
+
+input[type="file"]::file-selector-button:active {
+  transform: translateY(1px) scale(0.98);
+}
